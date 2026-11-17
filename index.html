@@ -2376,4 +2376,5 @@ var seen=0;try{seen=sessionStorage.getItem("vcSeen")}catch(e){}
 if(!seen){try{await ref.set({n:n+1});try{sessionStorage.setItem("vcSeen","1")}catch(e){}}catch(e){}}
 var q=await db.collection("visits").get(),t=0;q.docs.forEach(function(d){var x=d.data();if(x&&typeof x.n=="number")t+=x.n});
 document.getElementById("vcn").textContent=(BASE+t).toLocaleString("en-US");document.getElementById("vc").hidden=false}catch(e){}})();</script>
+<script id="navfix">document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var h=a.getAttribute("href");if(h.length<2)return;e.preventDefault();if(location.hash==h){r()}else{location.hash=h}});</script>
 </body></html>
